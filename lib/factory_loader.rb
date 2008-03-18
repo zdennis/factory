@@ -75,7 +75,7 @@ require 'find'
 # * Dave Crosby at Atomic Object
 # * Ryan Fogle at Atomic Object
 class FactoryLoader
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
   
   # Constructs a FactoryLoader. The passed in factory_paths are searched recursively.
   def initialize(*factory_paths)
