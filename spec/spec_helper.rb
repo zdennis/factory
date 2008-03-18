@@ -11,11 +11,8 @@ else
   require 'spec'
 end
 
-RAILS_ROOT = File.dirname(__FILE__) + '/rails_root'
-FileUtils.mkdir_p(RAILS_ROOT + "/app/factories")
+SAMPLE_PROJECT_DIR = File.dirname(__FILE__) + '/sample_project'
+CUSTOM_FACTORIES_DIR = SAMPLE_PROJECT_DIR + "/lib/factories"
+SAMPLE_LIB_DIR = SAMPLE_PROJECT_DIR + "/lib"
+FileUtils.mkdir_p(CUSTOM_FACTORIES_DIR)
 require File.dirname(__FILE__) + '/../lib/factory_loader'
-
-# cleanup our dummy rails_root
-at_exit do
-  FileUtils.rm_rf(RAILS_ROOT + "/app/factories")
-end

@@ -1,0 +1,17 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+lib/factory_loader.rb
+spec/factory_loader_spec.rb
+spec/sample_project
+spec/sample_project/lib
+spec/sample_project/lib/cat.rb
+spec/sample_project/lib/dog.rb
+spec/sample_project/lib/factories
+spec/sample_project/lib/factories/fish
+spec/sample_project/lib/factories/fish/dolphin_factory.rb
+spec/sample_project/lib/fish
+spec/sample_project/lib/fish/dolphin.rb
+spec/sample_project/lib/fish/guppy.rb
+spec/spec_helper.rb
