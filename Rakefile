@@ -13,32 +13,6 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb', 'README','CHANGES','MIT-LICENSE')
 end
 
-namespace :gem do
-  task :build do
-    system "gem build factory_loader.gemspec"
-  end
-  
-  task :install => "gem:build" do
-    system "gem install factory_loader*.gem"
-  end
-  
-  task :uninstall do
-    system "gem uninstall factory_loader"
-  end
-end
-
-namespace :rubyforge do
-  task :deploy do 
-    puts [
-      "gem build factory_loader.gemspec",
-      "rubyforge login",
-      "rubyforge config mhs",
-      "rubyforge create_package mhs factory_loader",
-      "rubyforge add_release mhs factory_loader 0.x.0 factory_loader-0.x.0.gem"      
-    ]
-  end
-end
-
 require 'rubygems'
 require 'hoe'
 require './lib/factory_loader.rb'
