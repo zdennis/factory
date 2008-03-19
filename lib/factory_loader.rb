@@ -110,8 +110,8 @@ class FactoryLoader
     unless Object.const_defined?(factory_name)
       eval <<-CODE
         class ::#{factory_name}
-          def create(options={})
-            #{object_name}.new options
+          def create(*options)
+            #{object_name}.new *options
           end
         end
       CODE

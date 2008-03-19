@@ -57,11 +57,20 @@ describe FactoryLoader, "#load" do
         ::Dog.stub!(:new).and_return(@object)
       end
       
-      it "creates a presenter passing along any options" do
-        ::Dog.should_receive(:new).with(:foo => :bar)
-        ::DogFactory.new.create(:foo => :bar)
+      describe "when constructor arguments are supplied" do
+        it "creates a presenter passing along any options" do
+          ::Dog.should_receive(:new).with(:foo => :bar)
+          ::DogFactory.new.create(:foo => :bar)
+        end
       end
       
+      describe "when constructor arguments are not supplied" do
+        it "creates a presenter passing along no options" do
+          ::Dog.should_receive(:new).with
+          ::DogFactory.new.create
+        end
+      end
+
       it "returns the newly created presenter" do
         ::DogFactory.new.create.should == @object        
       end
