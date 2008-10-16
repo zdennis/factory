@@ -2,10 +2,12 @@ History.txt
 Manifest.txt
 README.txt
 Rakefile
+factory_loader.gemspec
 lib/factory_loader.rb
+lib/factory_loader/factory.rb
+lib/factory_loader/factory_loader.rb
 spec/factory_loader_spec.rb
-spec/sample_project
-spec/sample_project/lib
+spec/factory_spec.rb
 spec/sample_project/lib/cat.rb
 spec/sample_project/lib/dog.rb
 spec/sample_project/lib/factories

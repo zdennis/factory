@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.date = %q{2008-10-15}
   s.description = %q{FactoryLoader is intended to help scale object creation with less pain and less refactoring.  Public git repository: 	git://github.com/zdennis/factory_loader.git}
   s.email = ["zach.dennis@gmail.com"]
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
-  s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "lib/factory_loader.rb", "spec/factory_loader_spec.rb", "spec/sample_project", "spec/sample_project/lib", "spec/sample_project/lib/cat.rb", "spec/sample_project/lib/dog.rb", "spec/sample_project/lib/factories", "spec/sample_project/lib/factories/fish", "spec/sample_project/lib/factories/fish/dolphin_factory.rb", "spec/sample_project/lib/fish", "spec/sample_project/lib/fish/dolphin.rb", "spec/sample_project/lib/fish/guppy.rb", "spec/spec_helper.rb"]
+  s.extra_rdoc_files = [" History.txt", " Manifest.txt", " README.txt"]
+  s.files = [" History.txt", " MIT LICENSE", " Manifest.txt", " README.txt", " Rakefile", " factory_loader.gemspec", " lib/factory_loader.rb", " lib/factory_loader/factory.rb", " lib/factory_loader/factory_loader.rb", " spec/factory_loader_spec.rb", " spec/factory_spec.rb", " spec/sample_project/lib/cat.rb", " spec/sample_project/lib/dog.rb", " spec/sample_project/lib/factories", " spec/sample_project/lib/factories/fish", " spec/sample_project/lib/factories/fish/dolphin_factory.rb", " spec/sample_project/lib/fish", " spec/sample_project/lib/fish/dolphin.rb", " spec/sample_project/lib/fish/guppy.rb", " spec/spec_helper.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/zdennis/factory_loader/wikis (url)}
   s.rdoc_options = ["--main", "README.txt"]
