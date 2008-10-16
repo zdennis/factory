@@ -1,6 +1,6 @@
 = FactoryLoader
 
-* http://www.continuousthinking.com/factory_loader (url)
+* http://github.com/zdennis/factory_loader/wikis (url)
 
 == DESCRIPTION:
 
