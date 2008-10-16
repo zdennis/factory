@@ -1,12 +1,12 @@
-= FactoryLoader
+= Factory
 
-* http://github.com/zdennis/factory_loader/wikis (url)
+* http://github.com/zdennis/factory/wikis (url)
 
 == DESCRIPTION:
 
-FactoryLoader is intended to help scale object creation with less pain and less refactoring.
+Factory is intended to help scale object creation with less pain and less refactoring.
 
-Public git repository: 	git://github.com/zdennis/factory_loader.git
+Public git repository: 	git://github.com/zdennis/factory.git
 
 == FEATURES/PROBLEMS:
 
@@ -20,7 +20,9 @@ See RDOC
 
 == INSTALL:
 
-* gem install factory_loader
+From github:
+
+* gem install zdennis-factory
 
 == LICENSE:
 

@@ -1,6 +1,6 @@
 require 'find'
 
-# FactoryLoader is intended to help scale object creation with less pain and less 
+# Factory::Loader is intended to help scale object creation with less pain and less 
 # refactoring. 
 #
 # In the early stages of a project object creation is simple and 
@@ -11,7 +11,7 @@ require 'find'
 # factories are needed it is usually painful and time consuming to update
 # the code base to use them. 
 #
-# This is where FactoryLoader comes into play. It automatically creates a Factory
+# This is where Factory::Loader comes into play. It automatically creates a Factory
 # class for your objects and provides a Factory#create method which passes any arguments
 # along to your object's constructor.
 #
@@ -30,7 +30,7 @@ require 'find'
 #
 # Given the above project directory structure you could have the following code 
 # in init.rb:
-#    factory_loader = FactoryLoader.new("lib/factories")
+#    factory_loader = Factory::Loader.new("lib/factories")
 #    factory_loader.load("lib/things")
 # 
 # The first call constructs a factory loader telling it which directory is used
@@ -46,12 +46,12 @@ require 'find'
 #    Foo.new :a => :b
 #
 # Given the same directory and file structure a BarFactory will NOT be created. This is because
-# we told the FactoryLoader when we constructed it that custom factories are storied in lib/factories/
-# and a bar_factory.rb file exists there, so FactoryLoader assumes you want to use
+# we told the Factory::Loader when we constructed it that custom factories are storied in lib/factories/
+# and a bar_factory.rb file exists there, so Factory::Loader assumes you want to use
 # a custom factory. It also assumes that the class inside of bar_factory.rb is BarFactory.
 #
-# FactoryLoader dynamically creates the factory classes -- they are not written
-# to disk. FactoryLoader also uses file naming conventions to determine
+# Factory::Loader dynamically creates the factory classes -- they are not written
+# to disk. Factory::Loader also uses file naming conventions to determine
 # what to do. For example: 
 #    foo.rb => FooFactory
 #    crazy_dolphins.rb => CrazyDolphinsFactory
@@ -74,9 +74,9 @@ require 'find'
 # * Brandon Keepers at CollectiveIdea
 # * Dave Crosby at Atomic Object
 # * Ryan Fogle at Atomic Object
-class FactoryLoader
+class Factory::Loader
   
-  # Constructs a FactoryLoader. The passed in factory_paths are searched recursively.
+  # Constructs a Factory::Loader. The passed in factory_paths are searched recursively.
   def initialize(*factory_paths)
     @factory_paths = factory_paths.map{ |f| File.expand_path(f) } 
   end

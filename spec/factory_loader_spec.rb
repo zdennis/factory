@@ -1,9 +1,9 @@
 require File.dirname(__FILE__) + '/spec_helper'
 require 'fileutils'
 
-describe FactoryLoader, "#load" do
+describe Factory::Loader, "#load" do
   def load
-    FactoryLoader.new(CUSTOM_FACTORIES_DIR).load(SAMPLE_LIB_DIR)
+    Factory::Loader.new(CUSTOM_FACTORIES_DIR).load(SAMPLE_LIB_DIR)
   end
     
     it "creates a factory for each .rb file in the loaded directory" do

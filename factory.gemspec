@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zach Dennis"]
   s.date = %q{2008-10-15}
-  s.description = %q{FactoryLoader is intended to help scale object creation with less pain and less refactoring.  Public git repository: 	git://github.com/zdennis/factory_loader.git}
+  s.description = %q{Factory is intended to help scale object creation with less pain and less refactoring.  Public git repository: 	git://github.com/zdennis/factory_loader.git}
   s.email = ["zach.dennis@gmail.com"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
   s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "factory.gemspec", "lib/factory.rb", "lib/factory/factory.rb", "lib/factory/loader.rb", "spec/factory_loader_spec.rb", "spec/factory_spec.rb", "spec/sample_project/lib/cat.rb", "spec/sample_project/lib/dog.rb", "spec/sample_project/lib/factories", "spec/sample_project/lib/factories/fish", "spec/sample_project/lib/factories/fish/dolphin_factory.rb", "spec/sample_project/lib/fish", "spec/sample_project/lib/fish/dolphin.rb", "spec/sample_project/lib/fish/guppy.rb", "spec/spec_helper.rb"]
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{factory}
   s.rubygems_version = %q{1.2.0}
-  s.summary = %q{FactoryLoader is intended to help scale object creation with less pain and less refactoring}
+  s.summary = %q{Factory is intended to help scale object creation with less pain and less refactoring}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION

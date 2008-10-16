@@ -1,5 +1,5 @@
 # Factory is a base class used fo creating object factories. It is
-# used by FactoryLoader, but it can also be used as a base for
+# used by Factory::Loader, but it can also be used as a base for
 # custom factories. For example:
 #
 #    class FooFactory < Factory

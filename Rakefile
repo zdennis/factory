@@ -13,7 +13,7 @@ end
 desc "Generate RDoc documentation"
 Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = "FactoryLoader: intended to help scaling complex object creation with less pain and less refactoring." 
+  rdoc.title    = "Factory: intended to help scaling complex object creation with less pain and less refactoring." 
   rdoc.rdoc_files.include('lib/**/*.rb', 'README.txt','History.txt','MIT-LICENSE')
 end
 
