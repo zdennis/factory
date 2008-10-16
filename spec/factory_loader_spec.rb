@@ -46,13 +46,14 @@ describe FactoryLoader, "#load" do
   
   describe "a created factory" do
     before(:all) do
+      Object.send :remove_const, :Person if Object.const_defined?(:Person)
       ::Person = stub("Person model")
       Dir["#{SAMPLE_LIB_DIR}/*.rb"].each{ |f| require f }
       load
     end
   
     describe '#create' do
-      before do
+      before(:each) do
         @object = mock "some new object"
         ::Dog.stub!(:new).and_return(@object)
       end

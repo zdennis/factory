@@ -9,8 +9,7 @@ require 'find'
 # sense to create custom factory classes upfront to deal with complex
 # object construction that may not exist yet. But when those custom
 # factories are needed it is usually painful and time consuming to update
-# the code base to use them. It's also easy for developers to give-in
-# due to time constraints and start making bad decisions.
+# the code base to use them. 
 #
 # This is where FactoryLoader comes into play. It automatically creates a Factory
 # class for your objects and provides a Factory#create method which passes any arguments
@@ -18,7 +17,7 @@ require 'find'
 #
 # When you need to have custom factory behavior you can implement the factory
 # without having to update other code references (assuming you've used the factory
-# in the rest of your application rather then direct class references).
+# in the rest of your application rather than direct class references).
 #
 #   project/
 #     init.rb
@@ -38,7 +37,7 @@ require 'find'
 # to store developer-written custom factories. 
 #
 # The second call will create a in-memory factory class for each *.rb file 
-# in the lib/things/ directory. A FooFactory class will be created to
+# in the lib/things/ directory. For example, a FooFactory class will be created to
 # correspond with the foo.rb file. The generated factory
 # will provide a #create method which will pass along all arguments to
 # the constructor of the object it wraps. So...
@@ -46,8 +45,8 @@ require 'find'
 # is the same as:
 #    Foo.new :a => :b
 #
-# A BarFactory will NOT be created. This is because
-# we told the FactoryLoader that custom factories are storied in lib/factories/
+# Given the same directory and file structure a BarFactory will NOT be created. This is because
+# we told the FactoryLoader when we constructed it that custom factories are storied in lib/factories/
 # and a bar_factory.rb file exists there, so FactoryLoader assumes you want to use
 # a custom factory. It also assumes that the class inside of bar_factory.rb is BarFactory.
 #
@@ -66,16 +65,17 @@ require 'find'
 # git://github.com/zdennis/factory_loader.git
 # 
 # === Homepage: 
-# http://www.continuousthinking.com/factory_loader
+# http://github.com/zdennis/factory_loader/wikis
 #
 # === Author: 
 # * Zach Dennis at Mutually Human Software (zach.dennis@gmail.com, zdennis@mutuallyhuman.com)
 #
 # === Special Thanks
+# * Brandon Keepers at CollectiveIdea
 # * Dave Crosby at Atomic Object
 # * Ryan Fogle at Atomic Object
 class FactoryLoader
-  VERSION = "0.1.2"
+  VERSION = "0.2.0"
   
   # Constructs a FactoryLoader. The passed in factory_paths are searched recursively.
   def initialize(*factory_paths)
@@ -109,10 +109,7 @@ class FactoryLoader
     factory_name = "#{object_name}Factory"
     unless Object.const_defined?(factory_name)
       eval <<-CODE
-        class ::#{factory_name}
-          def create(*options)
-            #{object_name}.new *options
-          end
+        class ::#{factory_name} < Factory
         end
       CODE
     end
