@@ -15,4 +15,4 @@ SAMPLE_PROJECT_DIR = File.dirname(__FILE__) + '/sample_project'
 CUSTOM_FACTORIES_DIR = SAMPLE_PROJECT_DIR + "/lib/factories"
 SAMPLE_LIB_DIR = SAMPLE_PROJECT_DIR + "/lib"
 FileUtils.mkdir_p(CUSTOM_FACTORIES_DIR)
-require File.dirname(__FILE__) + '/../lib/factory_loader'
+require File.dirname(__FILE__) + '/../lib/factory'
