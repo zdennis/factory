@@ -6,6 +6,10 @@ task :spec do
   system "spec spec --pattern '**/*_spec.rb'"
 end
 
+task :gem do
+  system "rake debug_gem > factory.gemspec"
+end
+
 desc "Generate RDoc documentation"
 Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
