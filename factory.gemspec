@@ -1,11 +1,11 @@
-(in /Users/zdennis/source/opensource_projects/factory_loader)
+(in /Users/zdennis/source/opensource_projects/factory)
 Gem::Specification.new do |s|
   s.name = %q{factory}
   s.version = "0.2.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zach Dennis"]
-  s.date = %q{2008-10-15}
+  s.date = %q{2008-10-30}
   s.description = %q{Factory is intended to help scale object creation with less pain and less refactoring.  Public git repository: 	git://github.com/zdennis/factory.git}
   s.email = ["zach.dennis@gmail.com"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
@@ -23,11 +23,11 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if current_version >= 3 then
-      s.add_development_dependency(%q<hoe>, [">= 1.7.0"])
+      s.add_development_dependency(%q<hoe>, [">= 1.8.0"])
     else
-      s.add_dependency(%q<hoe>, [">= 1.7.0"])
+      s.add_dependency(%q<hoe>, [">= 1.8.0"])
     end
   else
-    s.add_dependency(%q<hoe>, [">= 1.7.0"])
+    s.add_dependency(%q<hoe>, [">= 1.8.0"])
   end
 end
