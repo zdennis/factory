@@ -51,9 +51,10 @@ class Factory
     type.new *args, &blk
   end
   
-  def create_collection(objects)
+  def create_collection(objects, options={})
+    as = options[:as]
     type = self.class.name.sub(/Factory$/, '').constantize
-    returning objects.map {|o| type.new(o.class.name.underscore.to_sym => o) } do |collection|
+    returning objects.map {|o| type.new((as || o.class.name.underscore.to_sym) => o) } do |collection|
       collection.extend self.class.const_get(:CollectionMethods) if self.class.const_defined?(:CollectionMethods)
     end
   end

@@ -39,6 +39,14 @@ describe Factory do
         collection = DummyFactory.new.create_collection dummies
         collection.should == [ "dummy 1", "dummy 2" ]
       end
+      
+      it "returns a collection of Dummy objects when told what convention to folow" do
+        objects = [Object.new, Object.new]
+        Dummy.should_receive(:new).with(:dummy => objects[0]).and_return "dummy 1"
+        Dummy.should_receive(:new).with(:dummy => objects[1]).and_return "dummy 2"
+        collection = DummyFactory.new.create_collection objects, :as => :dummy
+        collection.should == [ "dummy 1", "dummy 2" ]        
+      end
     end
     
     context "when using a DummyPresenterFactory" do
