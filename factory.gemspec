@@ -1,4 +1,3 @@
-(in /Users/zdennis/source/opensource_projects/factory)
 Gem::Specification.new do |s|
   s.name = %q{factory}
   s.version = "0.2.5"
